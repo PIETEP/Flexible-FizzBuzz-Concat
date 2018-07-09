@@ -1,0 +1,26 @@
+入力
+$ ./fizzbuzz a[1]:s[1] ... a[n]:s[n] m
+引数として:で区切られた数値 a[i] と文字列 s[i] のペアを受け取る(最後の引数を除く)
+最後に受け取る引数 m は文字列に変換する対象の数値とする
+1 ≦ n ≦ 5
+1 ≦ s[i].length ≦ 50
+1 ≦ m ≦ 2000
+a[i] は全て異なる
+s[i] は全て異なる
+
+出力
+数値 m が、与えられた数値 a[i] のいずれかで割り切れる場合、対応する文字列 s[i] を表示する
+数値 m が、複数の i について a[i] で割り切れる場合は、a[i]が小さい順に対応する文字列 s[i] を連結して表示する
+数値 m が、どの a[i] でも割り切れない場合は、数値 m をそのまま表示する
+
+入出力例
+$ ./fizzbuzz 3:fizz 5:buzz 1
+1
+$ ./fizzbuzz 3:hoge 5:fuga 3
+hoge
+$ ./fizzbuzz 3:piyo 5:hogera 5
+hogera
+$ ./fizzbuzz 3:kabe 5:don 15
+kabedon
+$ ./fizzbuzz 5:hogera 3:piyo 2:huga 30
+hugapiyohogera
